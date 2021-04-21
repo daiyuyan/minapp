@@ -1,0 +1,19 @@
+<!--pages/list/list.wxml-->
+<view class='nav'><text>检索结果：</text></view>
+<!-- 没有信息，显示  “无记录” -->
+<view class='empty' hidden='{{haveInfo}}'>
+  <image src='/images/empty.png'></image>
+  <view>
+    <text>无记录</text>
+  </view>
+</view>
+
+
+<!-- 查询到信息，输出信息 -->
+<view class='list' hidden='{{notHaveInfo}}' bindtap= 'detail' wx:for="{{result}}" wx:key="index"  data-name='{{item.name}}'  data-GroupLeader="{{item.GroupLeader}}"   data-class="{{item.class}}"  data-hometown="{{item.hometown}}"  data-isPoor="{{item.isPoor}}"  data-medicalhis="{{item.medicalhis}}"  data-name="{{item.name}}" data-number="{{item.number}}" data-parcontact="{{item.parcontact}}" data-parentname="{{item.parentname}}" data-phone="{{item.phone}}" data-supervisor="{{item.supervisor}}">
+  <view>
+    <text>姓名：{{item.name}}</text>
+    <text>学号：{{item.number}}</text>
+    <text>班级：{{item.class}}</text>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="detail">
+  <text>基础信息</text>
+</view>
+
+<view class="group">
+  <van-cell-group>
+    <van-field value="{{number}}" label="学号" disabled autosize/>
+    <van-field value="{{name}}" label="姓名" disabled autosize/>
+    <!-- <van-field value="{{sex}}" label="性别" disabled autosize/> -->
+    <!-- <van-field value="{{categoryName}}" wx:if="{{notPopUp}}" label="类别" type="textarea" icon="question-o"
+    disabled autosize bind:click-icon="answer"/> -->
+    <van-field value="{{class}}" label="班级" disabled autosize/>
+    <van-field value="{{hometown}}" label="家乡" disabled autosize/>
+    <van-field value="{{ispoor}}" label="是否贫困" disabled autosize/>
+    <!-- <view hidden="{{status}}"> -->
+    <van-field value="{{medicalhis}}" label="过往病史" disabled />
+    <van-field value="{{phone}}" label="学生联系电话" disabled autosize/>
+    <van-field value="{{supervisor}}" label="导师/班主任" disabled autosize/>
+    <van-field value="{{GroupLeader}}" label="寝室长" disabled autosize/>
+    <van-field value="{{parcontact}}" label="家长联系电话" disabled autosize/>
+    <van-field value="{{parentname}}" label="家长姓名" disabled autosize/>
+    <!-- <van-field value="{{address}}" wx:if="{{notPopUp}}" label="家庭地址" type="textarea" disabled autosize/> -->
+    <!-- </view>
+     -->
+    <view hidden="{{inEdit}}">
+      <van-field value="{{remark}}" wx:if="{{notPopUp}}" label="备注" type="textarea" disabled autosize/>
+    </view>
+  </van-cell-group>
+</view>
+
+<!-- <view>
+  <view hidden="{{inEdit}}">
+    <van-button class="edit_btn" plain type="primary" bind:click="editRemark">修改备注</van-button>
+  </view>
+
+  <view hidden="{{notInEdit}}">
+    <van-cell-group>
+      <van-field label="备注" value="{{ remark }}" type="textarea" autosize border="{{ true }}"
+      bind:change="getNewRemark" />
+    </van-cell-group>
+    <view class="submit_btn">
+      <button plain type="primary" bindtap="updateRemark">提交</button>
+      <button plain type="warning" bindtap="cancelUpdateRemark">取消</button>
+    </view>
+  </view>
+
+  <view class="btn_group" hidden="{{status}}">
+    <van-button plain type="primary" bind:click="phoneCall">拨打电话</van-button>
+    <van-button plain type="primary" bind:click="copyIdcard">复制身份证号</van-button>
+    <van-button plain type="primary" bind:click="copyAddress">复制家庭地址</van-button>
+  </view>
+</view>
+
+<view style="z-index: 50; height: {{windowHeight}}px;">
+  <van-popup show="{{ show }}" closeable position="bottom" round="{{true}}"
+  custom-style="height: 50%" bind:close="onClose">
+    <view style="padding: 100rpx 30rpx; text-indent: 2em;">{{describe}} </view>
+  </van-popup>
+</view> -->
